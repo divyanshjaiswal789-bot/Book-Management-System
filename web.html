@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Book Management System</title>
+  <link rel="stylesheet" href="web.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="logo">📚</div>
+      <div>
+        <div class="logo-text">Smart Book Management System</div>
+        <div class="brand-by">By Divyansh Jaiswal</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#books">Books</a>
+      <a href="#cart">Cart <span id="cartCount" class="cart-count">0</span></a>
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Designed for Divyansh Jaiswal</p>
+      <h1>Discover your next favorite read</h1>
+      <p class="subtext">Welcome to Smart Book Management System — a modern bookstore experience built for effortless browsing, searching, and shopping.</p>
+      <div class="search-box">
+        <input type="text" id="search" placeholder="Search books by title or author..." onkeyup="searchBooks()">
+      </div>
+      <div class="stats-row">
+        <div class="stat-card">
+          <strong id="resultCount">4</strong>
+          <span>Books Available</span>
+        </div>
+        <div class="stat-card">
+          <strong id="cartTotal">₹0</strong>
+          <span>Cart Value</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="chart-badge">Books Distribution</div>
+      <div id="bookChart" class="book-chart"></div>
+      <div id="chartLegend" class="chart-legend"></div>
+    </div>
+  </section>
+
+  <main class="content-layout">
+    <section class="books" id="books">
+      <div class="section-head">
+        <h2>Featured Books</h2>
+        <span class="section-tag">Fresh arrivals</span>
+      </div>
+      <div id="bookContainer" class="book-grid"></div>
+    </section>
+
+    <aside class="cart-panel" id="cart">
+      <div class="section-head">
+        <h2>Your Cart</h2>
+        <button id="clearCart" class="clear-btn">Clear</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div id="cartSummary" class="cart-summary"></div>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <footer class="footer-note">
+    <p>Smart Book Management System • Made with care for Divyansh Jaiswal</p>
+  </footer>
+
+  <script src="web.js"></script>
+</body>
+</html>
